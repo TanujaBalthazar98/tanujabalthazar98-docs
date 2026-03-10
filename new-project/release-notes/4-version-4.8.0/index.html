@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://tanujabalthazar98.github.io/tanujabalthazar98-docs/new-project/release-notes/6-version-4.6.0/">
+        <link rel="canonical" href="https://tanujabalthazar98.github.io/tanujabalthazar98-docs/new-project/release-notes/4-version-4.8.0/">
       
       
-        <link rel="prev" href="../4-version-4.8.0/">
+        <link rel="prev" href="../">
       
+      
+        <link rel="next" href="../6-version-4.6.0/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>6 version 4.6.0 - Acceldata</title>
+        <title>4 version 4.8.0 - Acceldata</title>
       
     
     
@@ -78,11 +80,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#data-reliability" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -115,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6 version 4.6.0
+              4 version 4.8.0
             
           </span>
         </div>
@@ -236,10 +233,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../4-version-4.8.0/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -255,6 +259,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -263,35 +268,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Version 4.6.0
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="././" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../6-version-4.6.0/" class="md-nav__link">
         
   
   
@@ -307,47 +287,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-reliability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Reliability
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#others" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Others
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -371,36 +310,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-reliability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Reliability
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#others" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Others
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -422,82 +331,61 @@
                 
                   
 
-  <h1>6 version 4.6.0</h1>
+  <h1>4 version 4.8.0</h1>
 
-<p>This section lists the issues that have been resolved in this release.</p>
-<h4 id="data-reliability">Data Reliability<a class="headerlink" href="#data-reliability" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Kafka crawlers now handle scenarios where one or more assets contain no data, ensuring that remaining assets continue to be scanned successfully.</li>
-<li>Fixed schema drift score inconsistencies in the UI.</li>
-<li>Resolved broken Configuration Download button on View Policy page.</li>
-<li>Fixed incremental mode failure in Recon policies.</li>
-<li>Autosys data sources are now correctly shown only in the relevant ADOC section, resolving an issue where they were incorrectly displayed in the DR asset navigator.</li>
-<li>Fixed duplicate analyzer errors in SQL-based incremental policies.</li>
-<li>Policy API now handles missing ITEMS payload correctly.</li>
-<li>Auto anomaly policies now trigger as expected.</li>
-<li>API-based Freshness policy creation stabilized.</li>
-<li>Resolved incorrect display of ENUM values in DQ policies.</li>
-<li>Fixed API casing for consistent asset-level policy retrieval.</li>
-<li>Resolved left and right row count mismatch in Reconciliation policy</li>
-<li>Fixed an issue where incremental fields were not greyed out in persisted columns for Recon policies.</li>
-<li>Fixed column selection issue in segment level configuration.</li>
-<li>Fixed an issue where the ruleset application failed if tagged columns were archived. Data Reliability policies now process archived columns without execution issues.</li>
-<li>Resolved SLA breach row count values displaying inaccurate freshness deltas.</li>
-<li>Fixed an issue where selected columns in anomaly policies were not retained during import.</li>
-<li>Fixed lineage gap between Power BI datasets and Synapse DW assets.</li>
-</ul>
-<h4 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Dataplane upgrade option now available in client environment UI.</li>
-<li>Snowflake user account locking issue resolved.</li>
-<li>Fixed issues when importing over empty MongoDB collections.</li>
-<li>Fixed Teradata Table names. The table names are now fully visible.</li>
-<li>Resolved issue, the tag and classification name now appear in the data profile view.</li>
-<li>ServiceNow integration now successfully creates tickets.</li>
-<li>Fixed a UI issue where editing DBT Cloud data source configurations showed a blank screen and the Crawl option behaved inconsistently.</li>
-</ul>
 <hr />
-<p>This section highlights features or functionalities that are being phased out and will no longer be supported in future releases.</p>
+<p>type: page title: Version 4.8.0 listed: true slug: version-4-8-0 description: index_title: Version 4.8.0 hidden: keywords: tags: ---published</p>
+<p>Date: 29 September 2025</p>
+<p>This section consists of the new features and enhancements introduced in this release.</p>
 <ul>
-<li>Deprecate Composite Policy Option: The Composite Policy option has been removed from Data Reliability and all other ADOC platforms.</li>
+<li>Service User Management V1: Service accounts replace personal API keys for integrations and system operations. This ensures stable, auditable, and secure credentials that are not tied to individual user lifecycles. For more information, see <a href="https://www.google.com/url?q=https://docs.acceldata.io/acceldata-data-observability-cloud/documentation/service-users&amp;sa=D&amp;source=editors&amp;ust=1773140952592517&amp;usg=AOvVaw3iqNQOMT0KP3y4cucEm5cS">Service Users</a>.</li>
+<li>Profile Metrics for Pushdown Assets: Profiling in the pushdown engine (Snowflake, BigQuery, Databricks) now achieves parity with Spark. Users gain richer insights such as patterns, arrays, keys, and exact distinct counts, with tenant-level controls for governance.</li>
+<li>Backward Lineage from Power BI to Redshift: Backward lineage is now supported for Power BI, providing end-to-end traceability from dashboards to underlying sources. This extends parity with Snowflake, BigQuery, Databricks, and Redshift. For more information see, <a href="https://www.google.com/url?q=https://docs.acceldata.io/acceldata-data-observability-cloud/documentation/lineage&amp;sa=D&amp;source=editors&amp;ust=1773140952593379&amp;usg=AOvVaw0imP2c3MuAtwxYr_MYZdQD">Lineage</a>.</li>
+<li>Custom Notifications V2: Custom Notifications now integrate with Slack, Teams, Google Chat, Jira, and ServiceNow. Teams can receive alerts directly in their collaboration and ITSM tools alongside existing email and webhook channels. For more information see, <a href="https://www.google.com/url?q=https://docs.acceldata.io/acceldata-data-observability-cloud/documentation/notification-templates&amp;sa=D&amp;source=editors&amp;ust=1773140952593828&amp;usg=AOvVaw3ByQ1BwUHkGeXgOaPmHu76">Notification Templates</a>.</li>
+<li>Detailed Column-Level Data Quality Reporting: Column-level data quality scores are now surfaced in Discover Assets page, enabling deeper visibility into field-level health, faster root cause analysis, and greater trust in data assets. For more information, see <a href="https://www.google.com/url?q=https://docs.acceldata.io/acceldata-data-observability-cloud/documentation/asset-details%23column-level-data-quality-reporting&amp;sa=D&amp;source=editors&amp;ust=1773140952594279&amp;usg=AOvVaw038CihG46WvcOknTNA_BbL">Column-Level Data Quality Reporting</a>.</li>
+<li>Hive Cadence Support: Hive external tables now support cadence-based updates using native SQL commands, ensuring freshness and freshness policies run against the latest Hive Metastore metrics. For more information see, <a href="https://www.google.com/url?q=https://docs.acceldata.io/acceldata-data-observability-cloud/documentation/data-freshness%23step-1-enable-freshness-monitoring&amp;sa=D&amp;source=editors&amp;ust=1773140952594734&amp;usg=AOvVaw0Xbc5INO-Whm_bnVSJO7U3">Enable Freshness Monitoring</a>.</li>
+<li>Kafka Reconciliation Jobs – Start/End Value Support: Kafka reconciliation and profiling jobs now include start and end offsets/timestamps, aligning with Oracle and other sources for full auditability and traceability.</li>
+<li>Tenant-Level Configuration for Profile Metrics: Tenant admins can now set profiling defaults across all assets or new assets only. This ensures consistent governance, optimized performance, and parity across Spark and pushdown engines. For more information see, <a href="https://www.google.com/url?q=https://docs.acceldata.io/acceldata-data-observability-cloud/documentation/data-reliability-settings%235-profile-metrics-capabilities&amp;sa=D&amp;source=editors&amp;ust=1773140952595625&amp;usg=AOvVaw0KwPaG3G9PXSraS_gX8iNa">Profile Metrics Capabilities</a>.</li>
 </ul>
-<p>This section consists of known limitations we are aware of persisting in this release.</p>
+<p>This section lists the issues that have been resolved in this release.</p>
+<p>Connectors</p>
 <ul>
-<li>Crawler notifications are not supported for Jira and ServiceNow integrations, as alerts are not generated for crawler events.</li>
-<li>Oracle's TIMESTAMP WITH LOCAL TIMEZONE data type is not supported in Spark and may result in errors such as: org.apache.spark.SparkSQLException: Unrecognized SQL type -102</li>
-<li>
-<p>Native Incremental Processing Support for Custom SQL Queries Limitations:</p>
-</li>
-<li>
-<p>This feature only supports SQL-based policies. It does not apply to alias-based filtering (commonly used in Spark type configurations).</p>
-</li>
-<li>The placeholders for bounds must strictly be {{{lower_bound}}} and {{{upper_bound}}}. Custom placeholder names are not supported.</li>
-<li>When using a custom SQL view with incremental execution, one additional row may be included due to the inclusive nature of the BETWEEN clause.</li>
-<li>Full policy execution is currently not supported for custom SQL queries that use bound placeholders ({{{lower_bound}}}, {{{upper_bound}}}).</li>
-<li>Values entered for SQL validation during policy creation are not stored and are used only for testing the query.</li>
-<li>In Selective execution mode, the bounds defined in the incremental configuration window are passed to the SQL query.</li>
-<li>Queries using NOT BETWEEN conditions will not work with incremental execution. For example: SELECT * FROM table WHERE date_column NOT BETWEEN {{{lower_bound}}} AND {{{upper_bound}}}</li>
-<li>
-<p>This feature is not compatible with older Dataplane versions. Customers must upgrade to Dataplane 4.3.0 or later to use native incremental SQL queries.</p>
-</li>
-<li>
-<p>Within the Freshness Trend chart found in the Data Cadence tab, the upper bound, lower bound, and change in row count metrics are exclusively accessible for time filters such as today, yesterday, and those based on an hourly time frame.</p>
-</li>
-<li>Anomaly detection is not supported for nested columns of an asset.</li>
-<li>When the refresh token time expires for ServiceNow OAuth Integration, the status remains as configured instead of changing to expired.</li>
-<li>Dataproc is only supported on GCP as the cloud provider for data plane installation.</li>
-<li>Glossary window fails to load data due to Dataproc APIs failure.</li>
-<li>The Smart tag feature is currently available only for Kubernetes-driven Spark deployments.</li>
-<li>When a 2FA credential is activated, the credentials do not work.</li>
-<li>User-specific usage data for a specific day may not be accurately displayed or retrieved.</li>
-<li>Issue with GCP test connections.</li>
-<li>Profiling in BigQuery fails for tables when the partition filter is enabled.</li>
-<li>DQ Policy fails sometimes due to an inability to verify a space column with special characters.</li>
-<li>Unable to pick a reference asset on a Data Policy template when defining a Lookup Rule.</li>
-<li>The data lineage view for job runs is not visible on Databricks' Job Run Details page.</li>
-<li>If all values are null for primitive string and complex data types, profiling will occur, but the data type will be unknown.</li>
-<li>All failed events are not captured in the Audit Logs page.</li>
-<li>When performing Incremental Data Quality (DQ) checks with Datetime2 andDateOffset formats in Synapse, if no new records are added, the system processes the last record instead of skipping processing.</li>
+<li>Oracle → Databricks: Fixed reconciliation failures on select Oracle tables with ORA-01858.</li>
+<li>Databricks: Fixed profiling and data quality failures after enabling partition configuration.</li>
+<li>Databricks pushdown: Resolved Pattern Match (Regex) rule failures on TIMESTAMP columns.</li>
+<li>SAP → Snowflake: Fixed row-count reconciliation job failures caused by “Spark Applications Already Exists.”</li>
+</ul>
+<p>Data Quality &amp; Policies</p>
+<ul>
+<li>Fixed intermittent DQ policy execution errors (No Request Received in Dataplane).</li>
+<li>Corrected alerts that were triggered incorrectly for failed reconciliation jobs.</li>
+<li>Fixed import errors for reconciliation policies created from different sources.</li>
+<li>Resolved issue where policies were archived after crawling despite no metadata changes.</li>
+<li>Fixed Schema Drift policy import failures.</li>
+<li>Reconciliation policy exports now capture timezone correctly, preventing schedule mismatches after import.</li>
+<li>Fixed policy errors when column names contained spaces or dots.</li>
+<li>Improved reliability in retrieving asset column metadata for programmatic DQ policy creation using custom SQL.</li>
+<li>Pushdown parity: Data Violations tab now displays rows correctly when columns contain NULL values (aligned with Spark behavior).</li>
+<li>Resolved failures migrating data quality policies from Torch to ADOC.</li>
+</ul>
+<p>Scheduling &amp; Execution</p>
+<ul>
+<li>Fixed DQ scans/jobs that were stuck in Waiting state indefinitely.</li>
+<li>Fixed reconciliation jobs stuck in Running state after upgrade to 4.6.1.</li>
+<li>Autosys: Corrected case-mismatch handling for job names that blocked status pickup.</li>
+</ul>
+<p>Reporting &amp; UI</p>
+<ul>
+<li>Navigator: Fixed over-provisioning of permissions when viewing datasources.</li>
+<li>Profile Settings Migration: Notification group selections are now preserved.</li>
+<li>Fixed incremental profiling and sample data views for date-partitioned Parquet files.</li>
+<li>UI Config: KUBERNETES_SPARK_NODE_SELECTOR settings now apply correctly at pod level.</li>
+</ul>
+<p>Other Fixes</p>
+<ul>
+<li>Corrected permissions to allow deletion of profiling resources (previously missing cluster role).</li>
+<li>Fixed engine type migration so left/right engine settings carry forward between tenants.</li>
+<li>Resolved policy failures with error: “Dataplane not running, please contact your administrator.”</li>
 </ul>
 
 
@@ -538,7 +426,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../4-version-4.8.0/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Version 4.8.0">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -548,11 +436,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Version 4.8.0
+                Overview
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../6-version-4.6.0/" class="md-footer__link md-footer__link--next" aria-label="Next: Version 4.6.0">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Version 4.6.0
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
         
       </nav>
     
