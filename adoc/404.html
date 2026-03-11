@@ -56,7 +56,42 @@
 
     
     
-  </head>
+  <style id="adoc-topbar-css">
+/* AccelDocs top navbar — org logo + name + project name */
+#adoc-topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 44px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 1.25rem;
+  background: #1a73e8;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.adoc-tb-org {
+  color: #fff;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+.adoc-tb-sep {
+  color: rgba(255,255,255,.4);
+  font-size: .85rem;
+}
+.adoc-tb-proj {
+  color: rgba(255,255,255,.82);
+  font-size: .85rem;
+  white-space: nowrap;
+}
+/* Push MkDocs Material sticky header below our banner */
+body { padding-top: 44px !important; }
+.md-header { top: 44px !important; }
+</style>
+</head>
   
   
     
@@ -67,6 +102,7 @@
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+<div id="adoc-topbar"><span class="adoc-tb-org">Acceldata</span><span class="adoc-tb-sep">|</span><span class="adoc-tb-proj">ADOC</span></div>
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -343,14 +379,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/tanujabalthazar98-docs/release-notes/release-notes/5-version-4.7.0/" class="md-nav__link">
+      <a href="/tanujabalthazar98-docs/release-notes/release-notes/3-version-4.9.0/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Version 4.7.0
+    Version 4.9.0
   
 
     
